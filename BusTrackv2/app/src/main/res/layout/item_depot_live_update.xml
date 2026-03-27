@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- Platform Number Highlighted -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_platform"
+                android:tint="@color/purple_700"/>
+            <TextView
+                android:id="@+id/platformNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Platform: -"
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <!-- Current Vehicle Section -->
+        <LinearLayout
+            android:id="@+id/currentSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_section_card"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Vehicle"
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:textSize="16sp"
+                android:layout_marginBottom="6dp"/>
+            <TextView
+                android:id="@+id/currentVehicleNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle: -"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/currentArrivalTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arrival: -"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/currentDepartureTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Departure: -"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <!-- Up Next Section -->
+        <LinearLayout
+            android:id="@+id/upNextSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_section_card"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Up Next"
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:textSize="16sp"
+                android:layout_marginBottom="6dp"/>
+            <TextView
+                android:id="@+id/upNextVehicleNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle: -"
+                android:textStyle="italic"
+                android:textColor="@color/purple_700"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/upNextArrivalTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arrival: -"
+                android:textColor="@color/purple_700"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/upNextDepartureTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Departure: -"
+                android:textColor="@color/purple_700"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <!-- Add space at the bottom for the toggle button in the Activity layout -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView> 

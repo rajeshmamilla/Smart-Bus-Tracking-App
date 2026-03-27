@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeColor="#E0E0E0"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Section: Time and Bus Type -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/departureTimeText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="24sp"
+                android:textColor="#6200EE"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/busTypeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:padding="6dp"
+                android:background="#F3E5F5"
+                android:textColor="#6200EE"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Middle Section: Bus Details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/busNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/platformText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+            <TextView
+                android:id="@+id/runOnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#1976D2"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:textStyle="italic"/>
+        </LinearLayout>
+
+        <!-- Bottom Section: Service ID and Track Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/seatsText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="#757575"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/trackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Track Bus"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:minHeight="36dp"
+                android:minWidth="100dp"
+                app:cornerRadius="6dp"
+                app:icon="@android:drawable/ic_menu_mylocation"
+                app:iconSize="16dp"
+                app:iconPadding="4dp"
+                app:iconGravity="textStart"
+                app:iconTint="@android:color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView> 

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Top Bar with End Trip and Logout -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- End Trip Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/endTripButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Trip"
+            android:textColor="@android:color/white"
+            app:cornerRadius="20dp"
+            style="@style/Widget.MaterialComponents.Button"
+            app:backgroundTint="#FF5252" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!-- Logout Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textColor="@android:color/white"
+            app:icon="@drawable/ic_logout"
+            app:iconTint="@android:color/white"
+            app:cornerRadius="20dp"
+            style="@style/Widget.MaterialComponents.Button"
+            app:backgroundTint="#FF5252" />
+
+    </LinearLayout>
+
+    <!-- Main Card with Location Controls -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mainControlsCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="#F5F5F5"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Custom Toggle Switch at Top -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/gpsToggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/gpsOffText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="GPS Off"
+                        android:gravity="center"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:background="@drawable/toggle_off_background"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/gpsOnText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="GPS On"
+                        android:gravity="center"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:background="@drawable/toggle_on_background"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Location Controls Row with margin top -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/reachedAtLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:layout_marginEnd="8dp"
+                    android:hint="Reached At">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/reachedAtDropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/platformNumberLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:layout_marginStart="8dp"
+                    android:hint="Platform No">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/platformNumberDropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- Submit Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:text="Submit"
+                android:textColor="@android:color/white"
+                app:cornerRadius="20dp"
+                style="@style/Widget.MaterialComponents.Button"
+                app:backgroundTint="@color/primary" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

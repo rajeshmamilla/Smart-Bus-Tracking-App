@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "845179351477",
+    "project_id": "bustrack-v2",
+    "storage_bucket": "bustrack-v2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845179351477:android:aeb6a02ede063eb1f769fc",
+        "android_client_info": {
+          "package_name": "com.example.bustrackv2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcYHaJa4al8nWuk2P4TCxBPciX_jfSvws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
